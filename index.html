@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>Көркем ❤️</title>
+<style>
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#ff8fab,#ffc2d1);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+.box{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    max-width:350px;
+}
+h1{color:#ff4d6d;}
+p{font-size:18px;}
+button{
+    padding:12px 24px;
+    margin:10px;
+    border:none;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+}
+#yes{
+    background:#ff4d6d;
+    color:white;
+}
+#no{
+    background:#ddd;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h1>💖 Көркем 💖</h1>
+
+<p>Кешірші мені... 🥺</p>
+
+<p>Мен қателігімді түсіндім. Сен мен үшін өте қымбат жансың. Егер көңіліңді қалдырған болсам, шын жүректен кешірім сұраймын. ❤️</p>
+
+<button id="yes" onclick="yes()">Иә, кешірдім ❤️</button>
+<button id="no" onmouseover="move()">Жоқ 😅</button>
+
+</div>
+
+<script>
+function yes(){
+    document.body.innerHTML="<h1 style='display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;color:#ff4d6d;'>❤️ Рақмет, Көркем! ❤️<br>Мен сені қатты бағалаймын! 🌹</h1>";
+}
+function move(){
+    let b=document.getElementById("no");
+    b.style.position="absolute";
+    b.style.left=Math.random()*(window.innerWidth-120)+"px";
+    b.style.top=Math.random()*(window.innerHeight-60)+"px";
+}
+</script>
+
+</body>
+</html>
